@@ -1,0 +1,25 @@
+{
+	"plugin-data":
+	{
+		"name": "Booty Dark Admin",
+		"description": "Zusätzliches Plugin für das Booty Dark Admin Theme"
+    },
+    "booty-dark-admin-theme-by-jt-webtools": "Booty Dark Admin Theme von JT Webtools",
+    "sidebar-color": "Seitenleistenfarbe",
+    "color-of-the-sidebar-on-the-left": "Die Farbe der Seitenleiste auf der linken Seite",
+    "badges": "Abzeichen",
+    "hide-or-show-badges-on-the-sidebar-and-on-the-top-navigation-of-the-content-page": "Ein- oder Ausblenden von Abzeichen, die in der Seitenleiste und in der Navigation oben auf der Inhaltsseite angezeigt werden.",
+    "footer-info": "Fußzeileninfo",
+    "hide-or-show-footer-text-on-all-admin-pages": "Ein- oder Ausblenden von Fußzeileninformationen am unteren Rand der Administrationsseiten",
+    "dark": "Dunkel",
+    "light": "Licht",
+    "show": "Einblenden",
+    "hide": "Ausblenden",
+    "everywhere": "Überall",
+    "only-sidebar": "Nur Seitenleiste",
+    "only-content-page": "Nur Inhaltsseite",
+    "control-icons": "Steuerungssymbole",
+    "top": "Oben",
+    "bottom": "Unten",
+    "control-icons-position-on-sidebar": "Gibt die Position der Steuerungssymbole in der Seitenleiste an. Oben, unterhalb der Kopfzeile der Seitenleiste oder unten in der unteren Reihe der Seitenleiste."
+}

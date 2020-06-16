@@ -1,0 +1,25 @@
+{
+	"plugin-data":
+	{
+		"name": "Booty Dark Admin",
+		"description": "Kiegészítő plugin a Booty Dark Admin sablonhoz"
+    },
+    "booty-dark-admin-theme-by-jt-webtools": "Booty Dark Admin sablon a JT Webtools fejlesztésében",
+    "sidebar-color": "Oldalsáv színe",
+    "color-of-the-sidebar-on-the-left": "A bal oldalon lévő oldalsáv színe",
+    "badges": "Jelvények",
+    "hide-or-show-badges-on-the-sidebar-and-on-the-top-navigation-of-the-content-page": "Az oldalsávon és a Tartalom oldal tetején lévő navigációban megjelenő jelvények megjelenítése vagy elrejtése",
+    "footer-info": "Lábléc infó",
+    "hide-or-show-footer-text-on-all-admin-pages": "Lábléc infó megjelenítése vagy elrejtése az admin oldalak alján",
+    "dark": "Sötét",
+    "light": "Világos",
+    "show": "Megjelenítés",
+    "hide": "Elrejtés",
+    "everywhere": "Mindenhol",
+    "only-sidebar": "Csak az oldalsávon",
+    "only-content-page": "Csak a Tartalom oldalon",
+    "control-icons": "Vezérlő ikonok",
+    "top": "Felül",
+    "bottom": "Alul",
+    "control-icons-position-on-sidebar": "A vezérlő ikonok helyzetét adja az oldalsávon. Felül, az oldalsáv fejléc alatt, vagy alul az oldalsáv legalsó sorában."
+}
