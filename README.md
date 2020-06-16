@@ -1,18 +1,16 @@
-# Booty Dark Admin (plugin)
+# Booty Dark Admin (Plugin)
 
-### What is this?
+### What is Booty Dark Admin plugin?
 
-This is an Add-on plugin for Booty Dark Admin Theme of Bludit flat file CMS.
+This is an Add-on plugin for [Booty Dark Admin Theme](https://github.com/JTWebTools/booty-dark-admin-theme) of Bludit flat file CMS.
 
 This add-on plugin helps you to change individual elements of the Booty Dark Admin theme.
 
-This is an Add-on plugin, not working in standalone mode!
+This is an Add-on plugin, not working in standalone mode, **YOU NEED TO INSTALL** [Booty Dark Admin theme](https://github.com/JTWebTools/booty-dark-admin-theme) first!
 
 ------
 
-### What is changed?
-
-It can be said that the image of the whole admin page has changed. For example:
+### What you get with this plugin and theme?
 
 * fixed and colored sidebar 
 * the appearance of the sidebar menu items
@@ -36,8 +34,6 @@ Booty Dark Admin plugin contains in this release the following languages:
 
 ### Options available 
 
-These option are only available through this add-on plugin!
-
 * **Sidebar color** 
 
   You can set two colors for sidebar: Light or Dark
@@ -56,7 +52,7 @@ These option are only available through this add-on plugin!
 
 ------
 
-### Comparison
+### Comparison of features
 
 Here you can see the different what you get if you install this plugin
 
@@ -71,20 +67,11 @@ Here you can see the different what you get if you install this plugin
 
 ### Installing and activating the plugin
 
-**Method 1**
-
 - download the package
 - unzip it to a folder located on your local PC
-- upload the booty-dark-admin folder into  ***bl-plugins*** folder on your website
+- upload the ***booty-dark-admin*** folder into  ***bl-plugins*** folder on your website
 
-
-**Method 2**
-
-* download the package
-* upload it into the ***bl-plugins*** folder of your website
-* unzip it here,
-
-**One more thing...**
+**After successfully upload...**
 
 To using the plugin you have to activate it on the ***Setting / Plugins*** page on admin area of your website
 
@@ -92,7 +79,7 @@ To using the plugin you have to activate it on the ***Setting / Plugins*** page 
 
 ### Demo
 
-[Click here...](https://github.com/JTWebTools/bludit-plugins/blob/master/booty-dark-admin/images/plugin-settings.png)
+[Click here...](https://github.com/JTWebTools/booty-dark-admin-plugin/tree/master/images)
 
 -----
 
@@ -100,21 +87,21 @@ To using the plugin you have to activate it on the ***Setting / Plugins*** page 
 
 **Q:**	I have the package installed successfully. Where can i find the the plugin?
 
-​	**A:** 	Launch the admin area of your website and go to the ***Setting / Plugins*** page. Roll down the page to the "Disabled Plugins" section. Search for the Booty Dark Admin plugin and click on the text Activate. Now you can see the plugin in the "Enabled Plugins" section on the top of the Plugins page.
+​	**A:** 	Launch the admin area of your website and go to the ***Setting / Plugins*** page. Roll down the page to the "Disabled Plugins" section. Search for the ***Booty Dark Admin*** plugin and click on the text Activate. Now you can see the plugin in the "Enabled Plugins" section on the top of the Plugins page.
 
 **Q:**	How can i disable the plugin?
 
-​	**A:**	To disable the plugin launch the admin area of your website and go to the ***Setting / Plugins*** page. Search for the Booty Dark Admin plugin and click on the text Deactivate.
+​	**A:**	To disable the plugin launch the admin area of your website and go to the ***Setting / Plugins*** page. Search for the ***Booty Dark Admin*** plugin and click on the text Deactivate.
 
 **Q:**	How can i uninstall the Booty Dark Admin? 
 
-​	**A:**	Go to bl-plugins folder on your website root and search for the booty-dark directory and delete it. After this done, go to ***bl-content / databases / plugins*** directory, and delete the booty-dark-admin folder
+​	**A:**	Go to bl-plugins folder on your website root and search for the booty-dark directory and delete it. After this done, go to ***bl-content / databases / plugins*** directory, and **delete** the ***booty-dark-admin*** folder
 
 ------
 
 ### Is further development expected?
 
 Yes! I still have a lot of ideas waiting to be implemented. 
-To access future updates, visit [my GitHub releases page](https://github.com/JTWebTools?tab=repositories) or the [Bludit Plugins page](https://plugins.bludit.com/). 
+To access future updates, visit [my GitHub releases page](https://github.com/JTWebTools/booty-dark-admin-plugin/releases) or the [Bludit Plugins page](https://plugins.bludit.com/). 
 Check the current release of Booty Dark Admin on the Plugins page or on plugin settings page.
 
