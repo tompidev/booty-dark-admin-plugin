@@ -1,4 +1,15 @@
 <?php
+/** 
+ *  @package        :  Add-on plugin for Booty Dark Admin
+ *  @author         :  JT WebTools
+ *  @website        :  https://github.com/JTWebTools
+ *  @email          :  jtwebtools@gmx.net
+ *  @license        :  MIT
+ *  @last modified  :  22-6-2020 11:13:55
+ *  @release        :  1.0.3
+ *  @Copyright (c) 2020 JT WebTools
+ **/ 
+
 
 class pluginBootyDark extends Plugin {
     
@@ -94,8 +105,8 @@ class pluginBootyDark extends Plugin {
             $html .= '$("#sidebar").addClass("sidebar-light selected-light")'.PHP_EOL;
             $html .= '$(".admin-logo").addClass("admin-logo-light")'.PHP_EOL;
             $html .= '$(".list-group-item").removeClass("admin-logo-dark")'.PHP_EOL;
-            $html .= '$(".list-group-item").removeClass("top-icon-dark")'.PHP_EOL;
-            $html .= '$(".list-group-item").addClass("top-icon-light")'.PHP_EOL;
+            $html .= '$(".list-group-item").removeClass("control-icon-dark")'.PHP_EOL;
+            $html .= '$(".list-group-item").addClass("control-icon-light")'.PHP_EOL;
         }
         if(($this->getValue('badges')==='none') || ($this->getValue('badges')==='contentpage')){
             $html .= '$(".sidebar-badge").addClass("d-none")'.PHP_EOL;
