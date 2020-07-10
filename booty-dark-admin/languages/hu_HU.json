@@ -16,10 +16,11 @@
     "show": "Megjelenítés",
     "hide": "Elrejtés",
     "everywhere": "Mindenhol",
-    "only-sidebar": "Csak az oldalsávon",
-    "only-content-page": "Csak a Tartalom oldalon",
+    "only-on-sidebar": "Csak az oldalsávon",
+    "only-on-content-page": "Csak a Tartalom oldalon",
     "control-icons": "Vezérlő ikonok",
     "top": "Felül",
     "bottom": "Alul",
-    "control-icons-position-on-sidebar": "A vezérlő ikonok helyzetét adja az oldalsávon. Felül, az oldalsáv fejléc alatt, vagy alul az oldalsáv legalsó sorában."
+    "control-icons-position-on-sidebar": "A vezérlő ikonok helyzetét adja az oldalsávon. Felül, az oldalsáv fejléc alatt, vagy alul az oldalsáv legalsó sorában.",
+    "core-badge-warning": "FIGYELEM! Létező időzített tartalom esetén az Időzített fülön a bejegyzések lista oldalon meg fog jelenni a jelvény. Ez egy alap funkció."
 }

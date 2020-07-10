@@ -3,5 +3,6 @@
 	{
 		"name": "Booty Dark Admin",
 		"description": "Add-on plugin for Booty Dark Admin theme"
-	}
+	},
+    "core-badge-warning": "WARNING! On the Sheduled tab on the content page the badge will be shown if you have any Sheduled content. This is a core function."
 }

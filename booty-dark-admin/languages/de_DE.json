@@ -16,10 +16,11 @@
     "show": "Einblenden",
     "hide": "Ausblenden",
     "everywhere": "Überall",
-    "only-sidebar": "Nur Seitenleiste",
-    "only-content-page": "Nur Inhaltsseite",
+    "only-on-sidebar": "Nur Seitenleiste",
+    "only-on-content-page": "Nur Inhaltsseite",
     "control-icons": "Steuerungssymbole",
     "top": "Oben",
     "bottom": "Unten",
-    "control-icons-position-on-sidebar": "Gibt die Position der Steuerungssymbole in der Seitenleiste an. Oben, unterhalb der Kopfzeile der Seitenleiste oder unten in der unteren Reihe der Seitenleiste."
+    "control-icons-position-on-sidebar": "Gibt die Position der Steuerungssymbole in der Seitenleiste an. Oben, unterhalb der Kopfzeile der Seitenleiste oder unten in der unteren Reihe der Seitenleiste.",
+    "core-badge-warning": "WARNUNG! Auf der Inhaltsseite auf der Registerkarte Zeitplan wird das Abzeichen angezeigt, wenn Sie geplanten Inhalt haben. Dies ist eine Kernfunktion, kann man nicht ausgeschaltet werden."
 }
