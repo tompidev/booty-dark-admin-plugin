@@ -2,9 +2,9 @@
 	"author": "JT Webtools",
 	"email": "jtwebtools@gmx.net",
 	"website": "https://github.com/JTWebTools",
-	"version": "1.0.2",
-	"releaseDate": "01-6-2020",
+	"version": "1.1.0 Build 312",
+	"releaseDate": "2020-07-10",
 	"license": "MIT",
-	"compatible": "3.0",
+	"compatible": "3.x",
 	"notes": ""
 }
