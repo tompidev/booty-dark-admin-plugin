@@ -79,7 +79,7 @@ To using the plugin you have to activate it on the ***Setting / Plugins*** page 
 
 ### Demo
 
-[Click here...](https://github.com/JTWebTools/booty-dark-admin-plugin/tree/master/images)
+[Click here...](https://github.com/JTWebTools/booty-dark-admin-plugin/blob/master/demo/demo.md)
 
 -----
 
