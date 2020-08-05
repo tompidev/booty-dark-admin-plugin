@@ -6,14 +6,16 @@
 *  @email          :  jtwebtools@gmx.net
 *  @license        :  MIT
 *
-*  @last-modified  :  2020-07-10 10:32:47 CET
-*  @release        :  1.1.0 Build 312
+*  @last-modified  :  2020-08-05 21:15:02 CET
+*  @release        :  1.1.1 Build 3131
 **/
 
 class pluginBootyDarkAdmin extends Plugin {
     
   public function init() {
     $this->dbFields = array(
+		'customColor'=>'default',       //color themes for sidebar items
+		'bda-on-sidebar'=>'show',       //menu item on sidebar to quick access settings site of this plugin
 		'sidebarColor'=>'dark',         //sidebar coloring options
 		'badges'=>'sidebar',            //badges on sidebar
 		'footerInfo'=>'show',           //system info in the footer of all admin pages
@@ -36,19 +38,49 @@ class pluginBootyDarkAdmin extends Plugin {
         * Form "select" element for set color of sidebar 
         */
 		$html .= PHP_EOL.'<div>';
-		$html .= '<label>'.$L->g('Sidebar color').'</label>'.PHP_EOL;
-		$html .= '<select name="sidebarColor">'.PHP_EOL;
+		$html .= '<label for="sidebarColor" style="font-size:1.25rem">'.$L->g('Sidebar color').'</label>'.PHP_EOL;
+		$html .= '<select id="sidebarColor" name="sidebarColor">'.PHP_EOL;
 		$html .= '<option value="dark" '.($this->getValue('sidebarColor')==='dark'?'selected':'').'>'.$L->g('Dark').'</option>'.PHP_EOL;
 		$html .= '<option value="light" '.($this->getValue('sidebarColor')==='light'?'selected':'').'>'.$L->g('Light').'</option>'.PHP_EOL;
 		$html .= '</select>'.PHP_EOL;
 		$html .= '<small class="text-muted">'.$L->g('Color of the Sidebar on the left').'</small>'.PHP_EOL;
 		$html .= '</div>'.PHP_EOL;
         
+        /*
+        * Custom color settings for colored items on sidebar
+        */
+		$html .= PHP_EOL.'<div class="form-group">'.PHP_EOL;
+		$html .= '<label for="customColor" style="font-size:1.25rem">'.$L->g('Custom color settings for colored items').'</label>'.PHP_EOL;
+		$html .= '<select id="customColor" name="customColor">'.PHP_EOL;
+		$html .= '<option value="default" '.($this->getValue('customColor')==='default'?'selected':'').'>'.$L->g('Default').'</option>'.PHP_EOL;
+		$html .= '<option value="red" '.($this->getValue('customColor')==='red'?'selected':'').'>'.$L->g('Red').'</option>'.PHP_EOL;
+		$html .= '<option value="#10ca10" '.($this->getValue('customColor')==='#10ca10'?'selected':'').'>'.$L->g('Green').'</option>'.PHP_EOL;
+		$html .= '<option value="#4a95f5" '.($this->getValue('customColor')==='#4a95f5'?'selected':'').'>'.$L->g('Blue').'</option>'.PHP_EOL;
+		$html .= '<option value="#ecec15" '.($this->getValue('customColor')==='#ecec15'?'selected':'').'>'.$L->g('Yellow').'</option>'.PHP_EOL;
+        $html .= '<option value="orange" '.($this->getValue('customColor')==='orange'?'selected':'').'>'.$L->g('Orange').'</option>'.PHP_EOL;		
+        $html .= '<option value="#cf5be1" '.($this->getValue('customColor')==='#cf5be1'?'selected':'').'>'.$L->g('Purple').'</option>'.PHP_EOL;
+
+		$html .= '</select>'.PHP_EOL;
+		$html .= '<small class="text-muted">'.$L->g('Custom color settings for colored items on sidebar as control icons hover effect or active menu item').'</small>'.PHP_EOL;
+        $html .= '</div>'.PHP_EOL;
+        
+        /* 
+        * Form "select" element for choosing top or bottom position of control icons
+        */
+		$html .= PHP_EOL.'<div class="form-group">'.PHP_EOL;
+		$html .= '<label for="controlIcons" style="font-size:1.25rem">'.$L->g('Control Icons').'</label>'.PHP_EOL;
+		$html .= '<select id="controlIcons" name="controlIcons">'.PHP_EOL;
+		$html .= '<option value="top" '.($this->getValue('controlIcons')==='top'?'selected':'').'>'.$L->g('Top').'</option>'.PHP_EOL;
+		$html .= '<option value="bottom" '.($this->getValue('controlIcons')==='bottom'?'selected':'').'>'.$L->g('Bottom').'</option>'.PHP_EOL;
+		$html .= '</select>'.PHP_EOL;
+		$html .= '<small class="text-muted">'.$L->g('Control icons position on sidebar').'</small>'.PHP_EOL;
+        $html .= '</div>'.PHP_EOL;
+        
         /* 
         * Form "select" element for enable or disable Badges on sidebar and content page tabs 
         */
 		$html .= PHP_EOL.'<div>';
-		$html .= '<label>'.$L->g('Badges').'</label>'.PHP_EOL;
+		$html .= '<label for="badges" style="font-size:1.25rem">'.$L->g('Badges').'</label>'.PHP_EOL;
 		$html .= '<select id="badges" name="badges">'.PHP_EOL;
 		$html .= '<option value="hide" '.($this->getValue('badges')==='hide'?'selected':'').'>'.$L->g('Hide').'</option>'.PHP_EOL;
 		$html .= '<option value="all" '.($this->getValue('badges')==='all'?'selected':'').'>'.$L->g('Everywhere').'</option>'.PHP_EOL;
@@ -59,28 +91,28 @@ class pluginBootyDarkAdmin extends Plugin {
 		$html .= '<div id="no-badges-warning" class="alert alert-warning d-none">'.$L->g('core-badge-warning').'</div>'.PHP_EOL;
 		$html .= '</div>'.PHP_EOL;
         
+        /*
+        * Show or hide plugin menu item on sidebar
+        */
+		$html .= PHP_EOL.'<div class="form-group">'.PHP_EOL;
+		$html .= '<label for="bda-on-sidebar" style="font-size:1.25rem">'.$L->g('Show or hide plugin menu item').'</label>'.PHP_EOL;
+		$html .= '<select id="bda-on-sidebar" name="bda-on-sidebar">'.PHP_EOL;
+		$html .= '<option value="show" '.($this->getValue('bda-on-sidebar')==='show'?'selected':'').'>'.$L->g('Show').'</option>'.PHP_EOL;
+		$html .= '<option value="hide" '.($this->getValue('bda-on-sidebar')==='hide'?'selected':'').'>'.$L->g('Hide').'</option>'.PHP_EOL;
+		$html .= '</select>'.PHP_EOL;
+		$html .= '<small class="text-muted">'.$L->g('Show or hide plugin menu item on sidebar').'</small>'.PHP_EOL;
+        $html .= '</div>'.PHP_EOL;
+        
         /* 
         * Form "select" element for show or hide footer info of all admin pages
         */
 		$html .= PHP_EOL.'<div class="form-group">'.PHP_EOL;
-		$html .= '<label>'.$L->g('Footer info').'</label>'.PHP_EOL;
-		$html .= '<select name="footerInfo">'.PHP_EOL;
+		$html .= '<label for="footerInfo" style="font-size:1.25rem">'.$L->g('Footer info').'</label>'.PHP_EOL;
+		$html .= '<select id="footerInfo" name="footerInfo">'.PHP_EOL;
 		$html .= '<option value="show" '.($this->getValue('footerInfo')==='show'?'selected':'').'>'.$L->g('Show').'</option>'.PHP_EOL;
 		$html .= '<option value="none" '.($this->getValue('footerInfo')==='none'?'selected':'').'>'.$L->g('Hide').'</option>'.PHP_EOL;
 		$html .= '</select>'.PHP_EOL;
 		$html .= '<small class="text-muted">'.$L->g('Hide or show footer text on all admin pages').'</small>'.PHP_EOL;
-        $html .= '</div>'.PHP_EOL;
-        
-        /* 
-        * Form "select" element for choosing top or bottom position of control icons
-        */
-		$html .= PHP_EOL.'<div class="form-group">'.PHP_EOL;
-		$html .= '<label>'.$L->g('Control Icons').'</label>'.PHP_EOL;
-		$html .= '<select name="controlIcons">'.PHP_EOL;
-		$html .= '<option value="top" '.($this->getValue('controlIcons')==='top'?'selected':'').'>'.$L->g('Top').'</option>'.PHP_EOL;
-		$html .= '<option value="bottom" '.($this->getValue('controlIcons')==='bottom'?'selected':'').'>'.$L->g('Bottom').'</option>'.PHP_EOL;
-		$html .= '</select>'.PHP_EOL;
-		$html .= '<small class="text-muted">'.$L->g('Control icons position on sidebar').'</small>'.PHP_EOL;
         $html .= '</div>'.PHP_EOL;
         
         /* 
@@ -93,6 +125,38 @@ class pluginBootyDarkAdmin extends Plugin {
 
 		return $html;
     }
+
+	public function adminHead()
+	{
+        /* 
+        * Initializing custom colors for colored items on sidebar
+        */
+        $html = PHP_EOL.'<style>'.PHP_EOL;
+        if($this->getValue('customColor')==='default'){
+            $html .= '.new-content-icon{color: #52b3d0;}'.PHP_EOL;
+            $html .= '.control-icons-dark i:hover{color: #52b3d0;}'.PHP_EOL;
+            $html .= '.control-icons-light i:hover{color: #52b3d0;}'.PHP_EOL;
+            $html .= 'li.selected a{border-left: 5px solid #52b3d0;}'.PHP_EOL;
+        }else{
+            $html .= '.new-content-icon{color: '.$this->getValue('customColor').' ;}'.PHP_EOL;
+            $html .= '.control-icons-dark i:hover{color: '.$this->getValue('customColor').' ;}'.PHP_EOL;
+            $html .= '.control-icons-light i:hover{color:  '.$this->getValue('customColor').' ;}'.PHP_EOL;
+            $html .= 'li.selected a{border-left: 5px solid  '.$this->getValue('customColor').' ;}'.PHP_EOL;
+        }
+        $html .= '</style>'.PHP_EOL;
+        return $html;
+    }
+
+	public function adminSidebar()
+	{
+        global $login;
+        global $L;
+		if ($login->role() === 'admin' && $this->getValue('bda-on-sidebar') == 'show') {
+			return '<a class="nav-link" href="'.HTML_PATH_ADMIN_ROOT.'configure-plugin/'.$this->className().'" title="'.$L->g('Open Settings page of Booty Dark Admin plugin').'">'.$L->g('BDA settings').'';
+		} else {
+			return '';
+		}
+	}
 
     public function adminBodyEnd() 
     {
