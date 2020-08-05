@@ -56,11 +56,11 @@ Booty Dark Admin plugin contains in this release the following languages:
 
   Some original sidebar items have been removed and can be navigated using icons instead.
   
-* **Custom coloring**
+* **Custom coloring** NEW!
 
   Some items ion the Sidebar is colored. Now you can choose a color for this items to make your sidebar more customised.
 
-* **Sidebar menu item**
+* **Sidebar menu item** NEW!
 
   Option to choose between Show or Hide the menu item. Recommended displaying the menu item to a quickly access to the BDA settings page.
 
