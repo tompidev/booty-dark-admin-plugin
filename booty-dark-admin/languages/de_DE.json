@@ -2,9 +2,13 @@
 	"plugin-data":
 	{
 		"name": "Booty Dark Admin",
-		"description": "Zusätzliches Plugin für das Booty Dark Admin Theme"
+		"description": "Zusätzliches Plugin für das Booty Dark Admin (BDA) Theme"
     },
     "booty-dark-admin-theme-by-jt-webtools": "Booty Dark Admin Theme von JT Webtools",
+    "show-or-hide-plugin-menu-item": "Ein- oder ausblenden von plugin menüpunkt",
+    "bda-settings": "BDA Einstellungen",
+    "open-settings-page-of-booty-dark-admin-plugin": "Booty Dark Admin plugin Einstellungen seite eröffnen",
+    "show-or-hide-plugin-menu-item-on-adminbar": "Ein- oder ausblenden von plugin menüpunkt in der Seitenleiste",
     "sidebar-color": "Seitenleistenfarbe",
     "color-of-the-sidebar-on-the-left": "Die Farbe der Seitenleiste auf der linken Seite",
     "badges": "Abzeichen",
@@ -22,5 +26,13 @@
     "top": "Oben",
     "bottom": "Unten",
     "control-icons-position-on-sidebar": "Gibt die Position der Steuerungssymbole in der Seitenleiste an. Oben, unterhalb der Kopfzeile der Seitenleiste oder unten in der unteren Reihe der Seitenleiste.",
-    "core-badge-warning": "WARNUNG! Auf der Inhaltsseite auf der Registerkarte Zeitplan wird das Abzeichen angezeigt, wenn Sie geplanten Inhalt haben. Dies ist eine Kernfunktion, kann man nicht ausgeschaltet werden."
+    "core-badge-warning": "WARNUNG! Auf der Inhaltsseite auf der Registerkarte Zeitplan wird das Abzeichen angezeigt, wenn Sie geplanten Inhalt haben. Dies ist eine Kernfunktion, kann man nicht ausgeschaltet werden.",
+    "custom-color-settings-for-colored-items": "Benutzerdefinierte Farbeinstellungen für farbige Elemente",
+    "custom-color-settings-for-colored-items-on-sidebar-as-control-icons-hover-effect-or-active-menu-item": "Benutzerdefinierte Farbeinstellungen für farbige Elemente in der Seitenleiste als Hover-Effekt für Steuerungssymbole oder aktives Menüelement",
+    "red": "Rot",
+    "green": "Grün",
+    "blue": "Blau",
+    "yellow": "Gelb",
+    "orange": "Orange",
+    "purple": "Lila"
 }

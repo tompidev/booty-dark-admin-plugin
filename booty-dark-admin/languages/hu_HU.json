@@ -2,9 +2,13 @@
 	"plugin-data":
 	{
 		"name": "Booty Dark Admin",
-		"description": "Kiegészítő plugin a Booty Dark Admin sablonhoz"
+		"description": "Kiegészítő plugin a Booty Dark Admin (BDA) sablonhoz"
     },
     "booty-dark-admin-theme-by-jt-webtools": "Booty Dark Admin sablon a JT Webtools fejlesztésében",
+    "show-or-hide-plugin-menu-item": "Menüpont megjelenítése vagy elrejtése",
+    "bda-settings": "BDA beállítások",
+    "open-settings-page-of-booty-dark-admin-plugin": "A Booty Dark Admin plugin beállítások oldal megnyitása",
+    "show-or-hide-plugin-menu-item-on-adminbar": "A plugin menüpontjának megjelenítése vagy elrejtése az oldalsávon",
     "sidebar-color": "Oldalsáv színe",
     "color-of-the-sidebar-on-the-left": "A bal oldalon lévő oldalsáv színe",
     "badges": "Jelvények",
@@ -22,5 +26,13 @@
     "top": "Felül",
     "bottom": "Alul",
     "control-icons-position-on-sidebar": "A vezérlő ikonok helyzetét adja az oldalsávon. Felül, az oldalsáv fejléc alatt, vagy alul az oldalsáv legalsó sorában.",
-    "core-badge-warning": "FIGYELEM! Létező időzített tartalom esetén az Időzített fülön a bejegyzések lista oldalon meg fog jelenni a jelvény. Ez egy alap funkció."
+    "core-badge-warning": "FIGYELEM! Létező időzített tartalom esetén az Időzített fülön a bejegyzések lista oldalon meg fog jelenni a jelvény. Ez egy alap funkció.",
+    "custom-color-settings-for-colored-items": "Színezett oldalsáv elemek színe",
+    "custom-color-settings-for-colored-items-on-sidebar-as-control-icons-hover-effect-or-active-menu-item": "Egyedi színbeállítások a színezett elemekhez az oldalsávon, mint az aktív menü elem, vagy a vezérlő ikonok amikor fölé gördül az egérmutató",
+    "red": "Piros",
+    "green": "Zöld",
+    "blue": "Kék",
+    "yellow": "Sárga",
+    "orange": "Narancs",
+    "purple": "Lila"
 }
