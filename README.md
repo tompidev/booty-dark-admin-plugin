@@ -125,23 +125,23 @@ Check the current release of Booty Dark Admin on the Plugins page or on plugin s
 
 ### Release Notes
 
-##### v1.1.1 Build 3131 (05-8-2020)
+#### v1.1.1 Build 3131 (05-8-2020)
 
-###### Improvements:
+##### Improvements:
 
 * NEW: possibility to choose a custom color from a list to make colored sidebar items more customized
 * NEW: option to choose between Show or Hide a menu item to a quickly access to the BDA settings page
 
-###### Others:
+##### Others:
 
 * reordering the options on the Settings page
 * bug fixes
 * updating language files
 
-##### v1.1.0 Build 312 (10-7-2020)
+#### v1.1.0 Build 312 (10-7-2020)
 
 * Many changes according to Booty Dark Admin Theme enhancements
 
-##### v1.0.2 (24-6-2020)
+#### v1.0.2 (24-6-2020)
 
 * Initial release
