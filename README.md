@@ -6,10 +6,13 @@ This is an Add-on plugin for [Booty Dark Admin Theme](https://github.com/JTWebTo
 
 This add-on plugin helps you to change individual elements of the Booty Dark Admin theme.
 
-​			////////////////////////////////////////////////////////////////////////////////////////////
-​			///		This is an Add-on plugin, not working in standalone mode!		 ///
-​			///			**YOU NEED TO INSTALL** [Booty Dark Admin theme](https://github.com/JTWebTools/booty-dark-admin-theme) first!		  ///
-​			///////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+This is an Add-on plugin, not working in standalone mode!
+
+**YOU NEED TO INSTALL** [Booty Dark Admin theme](https://github.com/JTWebTools/booty-dark-admin-theme) first!
+
+//////////////////////////////////////////////////////////////////
 
 ------
 
@@ -53,11 +56,11 @@ Booty Dark Admin plugin contains in this release the following languages:
 
   Some original sidebar items have been removed and can be navigated using icons instead.
   
-* **Custom coloring**
+* **Custom coloring** NEW!
 
   Some items ion the Sidebar is colored. Now you can choose a color for this items to make your sidebar more customised.
 
-* **Sidebar menu item**
+* **Sidebar menu item** NEW!
 
   Option to choose between Show or Hide the menu item. Recommended displaying the menu item to a quickly access to the BDA settings page.
 
@@ -122,23 +125,23 @@ Check the current release of Booty Dark Admin on the Plugins page or on plugin s
 
 ### Release Notes
 
-##### v1.1.1 Build 3131 (05-8-2020)
+#### v1.1.1 Build 3131 (05-8-2020)
 
-###### Improvements:
+##### Improvements:
 
 * NEW: possibility to choose a custom color from a list to make colored sidebar items more customized
 * NEW: option to choose between Show or Hide a menu item to a quickly access to the BDA settings page
 
-###### Others:
+##### Others:
 
 * reordering the options on the Settings page
 * bug fixes
 * updating language files
 
-##### v1.1.0 Build 312 (10-7-2020)
+#### v1.1.0 Build 312 (10-7-2020)
 
 * Many changes according to Booty Dark Admin Theme enhancements
 
-##### v1.0.2 (24-6-2020)
+#### v1.0.2 (24-6-2020)
 
 * Initial release
