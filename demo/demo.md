@@ -19,3 +19,11 @@
 #### Badges on content site (showing badges with activated plugin on content page)
 
 ![](https://github.com/JTWebTools/booty-dark-admin-theme/blob/master/images/content-badges.png "Dashboard dark")
+
+#### Colored menu items on sidebar
+
+![](https://github.com/JTWebTools/booty-dark-admin-plugin/blob/master/images/plugin-settings-coloring.png "Colored menu items")
+
+#### Colored menu items on sidebar (hover effect on Control icons)
+
+![](https://github.com/JTWebTools/booty-dark-admin-plugin/blob/master/images/plugin-settings-coloring2.png "hover effect on Control icons")
