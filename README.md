@@ -137,7 +137,7 @@ Check the current release of Booty Dark Admin on the Plugins page or on plugin s
 
 ##### v1.1.0 Build 312 (10-7-2020)
 
-* Many changes depending on improvements of the Booty Dark Admin Theme
+* Many changes according to Booty Dark Admin Theme enhancements
 
 ##### v1.0.2 (24-6-2020)
 
