@@ -1,12 +1,12 @@
 <?php
 /**
-*  @package        :  Booty Dark Admin theme
-*  @author         :  JT WebTools
-*  @website        :  https://github.com/JTWebTools
-*  @email          :  jtwebtools@gmx.net
+*  @package        :  Add-on plugin for Booty Dark Admin theme
+*  @author         :  Tompidev
+*  @website        :  https://github.com/tompidev
+*  @email          :  support@tompidev.com
 *  @license        :  MIT
 *
-*  @last-modified  :  2020-08-05 21:15:02 CET
+*  @last-modified  :  2020-08-12 21:24:52 CET
 *  @release        :  1.1.1 Build 3131
 **/
 
