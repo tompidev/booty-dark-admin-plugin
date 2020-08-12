@@ -2,7 +2,7 @@
 
 ### What is Booty Dark Admin (BDA) plugin?
 
-This is an Add-on plugin for [Booty Dark Admin Theme](https://github.com/JTWebTools/booty-dark-admin-theme) of Bludit flat file CMS.
+This is an Add-on plugin for [Booty Dark Admin Theme](https://github.com/tompidev/booty-dark-admin-theme) of Bludit flat file CMS.
 
 This add-on plugin helps you to change individual elements of the Booty Dark Admin theme.
 
@@ -10,7 +10,7 @@ This add-on plugin helps you to change individual elements of the Booty Dark Adm
 
 This is an Add-on plugin, not working in standalone mode!
 
-**YOU NEED TO INSTALL** [Booty Dark Admin theme](https://github.com/JTWebTools/booty-dark-admin-theme) first!
+**YOU NEED TO INSTALL** [Booty Dark Admin theme](https://github.com/tompidev/booty-dark-admin-theme) first!
 
 //////////////////////////////////////////////////////////////////
 
@@ -95,7 +95,7 @@ To using the plugin you have to activate it on the ***Settings / Plugins*** page
 
 ### Demo
 
-[Click here...](https://github.com/JTWebTools/booty-dark-admin-plugin/blob/master/demo/demo.md)
+[Click here...](https://github.com/tompidev/booty-dark-admin-plugin/blob/master/demo/demo.md)
 
 -----
 
@@ -118,7 +118,7 @@ To using the plugin you have to activate it on the ***Settings / Plugins*** page
 ### Is further development expected?
 
 Yes! I still have a lot of ideas waiting to be implemented. 
-To access future updates, visit [my GitHub releases page](https://github.com/JTWebTools/booty-dark-admin-plugin/releases) or the [Bludit Plugins page](https://plugins.bludit.com/). 
+To access future updates, visit [my GitHub releases page](https://github.com/tompidev/booty-dark-admin-plugin/releases) or the [Bludit Plugins page](https://plugins.bludit.com/). 
 Check the current release of Booty Dark Admin on the Plugins page or on plugin settings page.
 
 ------
