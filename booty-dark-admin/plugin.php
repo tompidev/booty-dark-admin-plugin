@@ -6,8 +6,8 @@
 *  @email          :  support@tompidev.com
 *  @license        :  MIT
 *
-*  @last-modified  :  2020-08-12 21:24:52 CET
-*  @release        :  1.1.1 Build 3131
+*  @last-modified  :  2020-08-16 16:24:57 CET
+*  @release        :  1.1.2 Build 3131
 **/
 
 class pluginBootyDarkAdmin extends Plugin {
@@ -15,7 +15,7 @@ class pluginBootyDarkAdmin extends Plugin {
   public function init() {
     $this->dbFields = array(
 		'customColor'=>'default',       //color themes for sidebar items
-		'bda-on-sidebar'=>'show',       //menu item on sidebar to quick access settings site of this plugin
+		'bdaOnSidebar'=>'show',         //menu item on sidebar to quick access settings site of this plugin
 		'sidebarColor'=>'dark',         //sidebar coloring options
 		'badges'=>'sidebar',            //badges on sidebar
 		'footerInfo'=>'show',           //system info in the footer of all admin pages
@@ -95,10 +95,10 @@ class pluginBootyDarkAdmin extends Plugin {
         * Show or hide plugin menu item on sidebar
         */
 		$html .= PHP_EOL.'<div class="form-group">'.PHP_EOL;
-		$html .= '<label for="bda-on-sidebar" style="font-size:1.25rem">'.$L->g('Show or hide plugin menu item').'</label>'.PHP_EOL;
-		$html .= '<select id="bda-on-sidebar" name="bda-on-sidebar">'.PHP_EOL;
-		$html .= '<option value="show" '.($this->getValue('bda-on-sidebar')==='show'?'selected':'').'>'.$L->g('Show').'</option>'.PHP_EOL;
-		$html .= '<option value="hide" '.($this->getValue('bda-on-sidebar')==='hide'?'selected':'').'>'.$L->g('Hide').'</option>'.PHP_EOL;
+		$html .= '<label for="bdaOnSidebar" style="font-size:1.25rem">'.$L->g('Show or hide plugin menu item').'</label>'.PHP_EOL;
+		$html .= '<select id="bdaOnSidebar" name="bdaOnSidebar">'.PHP_EOL;
+		$html .= '<option value="show" '.($this->getValue('bdaOnSidebar')==='show'?'selected':'').'>'.$L->g('Show').'</option>'.PHP_EOL;
+		$html .= '<option value="hide" '.($this->getValue('bdaOnSidebar')==='hide'?'selected':'').'>'.$L->g('Hide').'</option>'.PHP_EOL;
 		$html .= '</select>'.PHP_EOL;
 		$html .= '<small class="text-muted">'.$L->g('Show or hide plugin menu item on sidebar').'</small>'.PHP_EOL;
         $html .= '</div>'.PHP_EOL;
@@ -120,7 +120,8 @@ class pluginBootyDarkAdmin extends Plugin {
         */
         $html .= PHP_EOL.'<div class="text-center pt-3 mt-5 border-top text-muted">'.PHP_EOL;
         $html .= $this->name();
-        $html .= ' - '.$L->g('version').': ' .$this->version();
+        $html .= ' - v' .$this->version();
+        $html .= ' @ '.date('Y').' <a href="'.$this->website().'" target="_blank">' .$this->author() . '</a> ';
         $html .= '</div>'.PHP_EOL;
 
 		return $html;
@@ -149,13 +150,12 @@ class pluginBootyDarkAdmin extends Plugin {
 
 	public function adminSidebar()
 	{
-        global $login;
         global $L;
-		if ($login->role() === 'admin' && $this->getValue('bda-on-sidebar') == 'show') {
-			return '<a class="nav-link" href="'.HTML_PATH_ADMIN_ROOT.'configure-plugin/'.$this->className().'" title="'.$L->g('Open Settings page of Booty Dark Admin plugin').'">'.$L->g('BDA settings').'';
-		} else {
-			return '';
-		}
+        $html = '';
+		if ($this->getValue('bdaOnSidebar') && $this->getValue('bdaOnSidebar') === 'show') {
+			$html = '<a id="bda-navitem" class="nav-link" href="'.HTML_PATH_ADMIN_ROOT.'configure-plugin/'.$this->className().'" title="'.$L->get('Open Settings page of Booty Dark Admin plugin').'">'.$L->get('BDA settings').'</a>';
+		} 
+        return $html;
 	}
 
     public function adminBodyEnd() 
