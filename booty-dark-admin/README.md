@@ -99,7 +99,12 @@ To using the plugin you have to activate it on the ***Settings / Plugins*** page
 
 ### Demo
 
-[Click here...](https://github.com/tompidev/booty-dark-admin-plugin/blob/master/demo/demo.md)
+To accessing the demo admin interface, here is your login data:
+
+**User**: DemoUser 
+**Password**: Demo123
+
+[To visit demo site click here...](http://demo.tompidev.com/admin)
 
 -----
 
