@@ -1,9 +1,9 @@
 {
-	"author": "Tompi Developments",
+	"author": "TompiDev",
 	"email": "support@tompidev.com",
-	"website": "https://github.com/tompidev",
-	"version": "1.1.2 Build 3131",
-	"releaseDate": "2020-08-16",
+	"website": "https://tompidev.com/",
+	"version": "1.2.0",
+	"releaseDate": "2020-08-31",
 	"license": "MIT",
 	"compatible": "3.x",
 	"notes": ""
