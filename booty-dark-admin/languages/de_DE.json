@@ -6,7 +6,7 @@
     },
     "booty-dark-admin-theme-by-jt-webtools": "Booty Dark Admin Theme von JT Webtools",
     "show-or-hide-plugin-menu-item": "Ein- oder ausblenden von plugin menüpunkt",
-    "bda-settings": "BDA Einstellungen",
+    "admin-theme-settings": "Thema Einstellungen",
     "open-settings-page-of-booty-dark-admin-plugin": "Booty Dark Admin plugin Einstellungen seite eröffnen",
     "show-or-hide-plugin-menu-item-on-adminbar": "Ein- oder ausblenden von plugin menüpunkt in der Seitenleiste",
     "sidebar-color": "Seitenleistenfarbe",
@@ -34,5 +34,18 @@
     "blue": "Blau",
     "yellow": "Gelb",
     "orange": "Orange",
-    "purple": "Lila"
+    "purple": "Lila",
+    "new-release-warning": "Neue BDA Plugin-Version ist verfügbar, bitte aktualisieren!",
+    "learn-more": "Mehr erfahren",
+    "release-notes": "Version information",
+    "package": "Paket",
+    "current-version": "Aktuelle Version",
+    "new-version": "Neue Version",
+    "release-date": "Veröffentlichungsdatum",
+    "download-release": "Herunterladen",
+    "close": "Schließen",
+    "new-bda-theme-version-is-available!": "Neue BDA Theme ist verfügbar!",
+    "useful-links": "Nützliche Links",
+    "try-tompidev-plugins-and-themes": "Probieren Sie Tompidev Plugins und Themen aus",
+    "all-plugins-and-themes-from-tompidev": "Alle Plugins und Themes von Tompidev"
 }
