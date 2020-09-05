@@ -7,8 +7,8 @@
  *  @email          :  support@tompidev.com
  *  @license        :  MIT
  *
- *  @last-modified  :  2020-09-04 14:28:10 CET
- *  @release        :  1.2.0
+ *  @last-modified  :  2020-09-05 11:34:10 CET
+ *  @release        :  1.2.1
  **/
 
 class pluginBootyDarkAdmin extends Plugin
@@ -133,7 +133,7 @@ class pluginBootyDarkAdmin extends Plugin
 		* Displaying the plugin version
 		*/
 		$html .= PHP_EOL . '<div class="text-center pt-3 mt-4 border-top text-muted">' . PHP_EOL;
-		$html .= $this->name() . ' - v' . $this->version() . ' @ ' . date('Y') . ' by ' .  $this->author() . PHP_EOL;
+		$html .= $this->name() . ' - v<span id="bdaPluginThisVersion">' . $this->version() . '</span> @ ' . date('Y') . ' by ' .  $this->author() . PHP_EOL;
 		$html .= '</div>' . PHP_EOL;
 		$html .= '<div class="text-center">' . PHP_EOL;
 		$html .= '<a class="fa fa-2x fa-globe" href="' . $this->website() . '" target="_blank" title="Visit TompiDev\'s Website"></a>' . PHP_EOL;
@@ -393,9 +393,10 @@ class pluginBootyDarkAdmin extends Plugin
                     console.log("[INFO] [BDA PLUGIN VERSION] New BootyDarkAdmin plugin version is available: v" + json.bdaPlugin.newVersion);
 
                     // show alert and disable all the function in the plugin if theme version upgrade is necessary
-                    if (json.bdaPlugin.newVersion > json.bdaPlugin.currentVersion) {
+                    var bdaPluginThisVersion = $("#bdaPluginThisVersion").text();
+                    if (json.bdaPlugin.newVersion > bdaPluginThisVersion) {
                         $("#pluginPackageName").html(json.bdaPlugin.package);
-                        $("#pluginCurrentVersion").html(json.bdaPlugin.currentVersion);
+                        $("#pluginCurrentVersion").html(bdaPluginThisVersion);
                         $("#pluginNewVersion").html( json.bdaPlugin.newVersion );
                         $("#pluginReleaseDate").html( json.bdaPlugin.releaseDate );
                         var changelogObj, i, j, x = "";
