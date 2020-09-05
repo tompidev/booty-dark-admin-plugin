@@ -129,6 +129,10 @@ Check the current release of Booty Dark Admin on the Plugins page or on plugin s
 
 ### Release Notes
 
+#### v1.2.1 (05-9-2020)
+
+* Bug fix: the upgrade system will now read the version displayed in the footer as the current version
+
 #### v1.2.0 (31-8-2020)
 
 ##### Improvements
