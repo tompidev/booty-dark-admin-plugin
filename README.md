@@ -4,13 +4,9 @@ This is an Add-on plugin for [Booty Dark Admin Theme](https://github.com/tompide
 
 This add-on plugin helps you to change individual elements of the Booty Dark Admin theme.
 
-//////////////////////////////////////////////////////////////////
-
-This is an Add-on plugin, not working in standalone mode!
+**IMPORTANT!** This is an Add-on plugin, not working in standalone mode!
 
 **YOU NEED TO INSTALL** [Booty Dark Admin theme](https://github.com/tompidev/booty-dark-admin-theme) first!
-
-//////////////////////////////////////////////////////////////////
 
 ------
 
