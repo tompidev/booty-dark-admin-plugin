@@ -1,5 +1,3 @@
-# Booty Dark Admin (Plugin)
-
 ### What is Booty Dark Admin (BDA) plugin?
 
 This is an Add-on plugin for [Booty Dark Admin Theme](https://github.com/tompidev/booty-dark-admin-theme) of Bludit flat file CMS.
@@ -131,7 +129,7 @@ Check the current release of Booty Dark Admin on the Plugins page or on plugin s
 
 #### v1.2.1 (05-9-2020)
 
-* Bug fix: the upgrade system will now read the version displayed in the footer as the current version
+* Bug fix: the update system will now use the version displayed in the footer as the current version
 
 #### v1.2.0 (31-8-2020)
 
