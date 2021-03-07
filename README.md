@@ -12,7 +12,7 @@ This add-on plugin helps you to change individual elements of the Booty Dark Adm
 
 ### What you get with this plugin and theme?
 
-* fixed and colored sidebar 
+* fixed and colored sidebar
 * the appearance of the sidebar menu items
 * some menu item putting into icons
 * badges for created articles, users and categories
@@ -22,34 +22,35 @@ This add-on plugin helps you to change individual elements of the Booty Dark Adm
 
 ------
 
-### Languages available 
+### Languages available
 
 Booty Dark Admin plugin contains in this release the following languages:
 
 * English
 * German
 * Hungarian
+* Czech (Thanks to [stani](https://stani.1blog.cz) :link:)
 
 ------
 
-### Options available 
+### Options available
 
-* **Sidebar color** 
+* **Sidebar color**
 
   You can set two colors for sidebar: Light or Dark
 
 * **Badges**
-  
+
   Hide or show Badges on the sidebar and on the top navigation of the content page. The badges will show you how many articles have been created on the site so far.
-  
+
 * **Footer info**
-  
+
   Displays the system name and version and the template name in the footer of all admin pages
-  
+
 * **Control icons**
 
   Some original sidebar items have been removed and can be navigated using icons instead.
-  
+
 * **Custom coloring**
 
   Some items ion the Sidebar is colored. Now you can choose a color for this items to make your sidebar more customised.
@@ -107,7 +108,7 @@ To using the plugin you have to activate it on the ***Settings / Plugins*** page
 
 ​	**A:**	To disable the plugin launch the admin area of your website and go to the ***Setting / Plugins*** page. Search for the ***Booty Dark Admin*** plugin and click on the text Deactivate.
 
-**Q:**	How can i uninstall the Booty Dark Admin? 
+**Q:**	How can i uninstall the Booty Dark Admin?
 
 ​	**A:**	Go to bl-plugins folder on your website root and search for the booty-dark directory and delete it. After this done, go to ***bl-content / databases / plugins*** directory, and **delete** the ***booty-dark-admin*** folder
 
@@ -115,52 +116,6 @@ To using the plugin you have to activate it on the ***Settings / Plugins*** page
 
 ### Is further development expected?
 
-Yes! I still have a lot of ideas waiting to be implemented. 
-To access future updates, visit [my GitHub releases page](https://github.com/tompidev/booty-dark-admin-plugin/releases) or the [Bludit Plugins page](https://plugins.bludit.com/). 
+Yes! I still have a lot of ideas waiting to be implemented.
+To access future updates, visit [my GitHub releases page](https://github.com/tompidev/booty-dark-admin-plugin/releases) or the [Bludit Plugins page](https://plugins.bludit.com/).
 Check the current release of Booty Dark Admin on the Plugins page or on plugin settings page.
-
-------
-
-### Release Notes
-
-#### v1.2.1 (05-9-2020)
-
-* Bug fix: the update system will now use the version displayed in the footer as the current version
-
-#### v1.2.0 (31-8-2020)
-
-##### Improvements
-
-- :new: integration of the upgrade system
-- :new: code optimization
-- :new: quick display of changes when the option is changed (save required to keep changes!)
-
-##### Fixes
-
-* some bug fixes
-* update language files
-
-#### v1.1.2 Build 3131 (16-8-2020)
-
-Some bug fixes
-
-#### v1.1.1 Build 3131 (05-8-2020)
-
-##### Improvements:
-
-* NEW: possibility to choose a custom color from a list to make colored sidebar items more customized
-* NEW: option to choose between Show or Hide a menu item to a quickly access to the BDA settings page
-
-##### Others:
-
-* reordering the options on the Settings page
-* bug fixes
-* updating language files
-
-#### v1.1.0 Build 312 (10-7-2020)
-
-* Many changes according to Booty Dark Admin Theme enhancements
-
-#### v1.0.2 (24-6-2020)
-
-* Initial release

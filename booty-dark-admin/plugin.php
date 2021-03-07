@@ -7,8 +7,8 @@
  *  @email          :  support@tompidev.com
  *  @license        :  MIT
  *
- *  @last-modified  :  2020-09-05 11:34:10 CET
- *  @release        :  1.2.1
+ *  @last-modified  :  2021-03-07 17:31:48 CET
+ *  @release        :  1.2.2
  **/
 
 class pluginBootyDarkAdmin extends Plugin
@@ -130,7 +130,7 @@ class pluginBootyDarkAdmin extends Plugin
         $html .= '</div>' . PHP_EOL;
 
 		/*
-		* Displaying the plugin version
+		* App footer for plugin version and developer's urls
 		*/
 		$html .= PHP_EOL . '<div class="text-center pt-3 mt-4 border-top text-muted">' . PHP_EOL;
 		$html .= $this->name() . ' - v<span id="bdaPluginThisVersion">' . $this->version() . '</span> @ ' . date('Y') . ' by ' .  $this->author() . PHP_EOL;
@@ -386,7 +386,7 @@ class pluginBootyDarkAdmin extends Plugin
             console.log("[INFO] [BDA PLUGIN VERSION] Getting list of versions of BootyDarkAdmin plugin.");
 
             $.ajax({
-                url: "http://tompidev.com/downloads/release-info/json/bl-plugin-bda.json",
+                url: "https://tompidev.com/downloads/release-info/json/bl-plugin-bda.json",
                 method: "GET",
                 dataType: "json",
                 success: function(json) {
