@@ -1,5 +1,9 @@
 ## Booty Dark Admin Plugin Changelog
 
+#### v1.2.3 (09-3-2021)
+
+* Bug fix: the small bell indicating the new version always appeared in the menu
+
 #### v1.2.2 (07-3-2021)
 
 * Updated language files
