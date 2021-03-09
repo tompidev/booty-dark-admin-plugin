@@ -7,8 +7,8 @@
  *  @email          :  support@tompidev.com
  *  @license        :  MIT
  *
- *  @last-modified  :  2021-03-07 17:31:48 CET
- *  @release        :  1.2.2
+ *  @last-modified  :  2021-03-09 21:05:44 CET
+ *  @release        :  1.2.3
  **/
 
 class pluginBootyDarkAdmin extends Plugin
@@ -222,7 +222,7 @@ class pluginBootyDarkAdmin extends Plugin
         global $L;
         $html = '';
         if ($this->getValue('bdaOnSidebar') && $this->getValue('bdaOnSidebar') === 'show') {
-            $html = '<a id="bdaNavitem" class="nav-link" href="' . HTML_PATH_ADMIN_ROOT . 'configure-plugin/' . $this->className() . '" title="' . $L->get('Open Settings page of Booty Dark Admin plugin') . '">' . $L->get('Admin Theme settings') . '<i id="bdaVersionMenuAlert" class="fa fa-bell mr-1 text-danger float-right d-none" title="' . $L->get('new-release-warning') . '"></i></a>';
+            $html = '<a id="bdaNavitem" data-bdaPluginThisVersion="' . $this->version() . '" class="nav-link" href="' . HTML_PATH_ADMIN_ROOT . 'configure-plugin/' . $this->className() . '" title="' . $L->get('Open Settings page of Booty Dark Admin plugin') . '">' . $L->get('Admin Theme settings') . '<i id="bdaVersionMenuAlert" title="' . $L->get('new-release-warning') . '"></i></a>';
         }
 
         return $html;
@@ -349,7 +349,11 @@ class pluginBootyDarkAdmin extends Plugin
         * Quick changes of menu item
         */
         $scripts .= '$("#bdaOnSidebar").change(function(){;' . PHP_EOL;
-        $scripts .= '$("#bdaNavitem").toggleClass("d-none")' . PHP_EOL;
+        $scripts .= 'if ($(this).val() == "hide"){' . PHP_EOL;
+        $scripts .= '$("#bdaNavitem").addClass("d-none")' . PHP_EOL;
+        $scripts .= '}else{' . PHP_EOL;
+        $scripts .= '$("#bdaNavitem").removeClass("d-none");' . PHP_EOL;
+        $scripts .= '}' . PHP_EOL;
         $scripts .= '})' . PHP_EOL;
 
         /*
@@ -379,8 +383,25 @@ class pluginBootyDarkAdmin extends Plugin
 
         /*
         * Version check script
+        *
+        * If the sidebar menu item appears, the current version will be read from this div, otherwise from the plugin page footer
+        */
+        if ($this->getValue('bdaOnSidebar') && $this->getValue('bdaOnSidebar') === 'show') {
+            $scripts .= '<script>
+            var getVersion = document.getElementById("bdaNavitem");
+            var bdaPluginThisVersion = getVersion.getAttribute("data-bdaPluginThisVersion");';
+            $scripts .= '</script>' . PHP_EOL;
+        }else{
+            $scripts .= '<script>
+            var bdaPluginThisVersion = $("#bdaPluginThisVersion").html();';
+            $scripts .= '</script>' . PHP_EOL;
+        }
+
+        /*
+        * Reading data from remote json file
         */
         $scripts .= '<script>
+
         function checkBDAVersion() {
 
             console.log("[INFO] [BDA PLUGIN VERSION] Getting list of versions of BootyDarkAdmin plugin.");
@@ -390,11 +411,8 @@ class pluginBootyDarkAdmin extends Plugin
                 method: "GET",
                 dataType: "json",
                 success: function(json) {
-                    console.log("[INFO] [BDA PLUGIN VERSION] New BootyDarkAdmin plugin version is available: v" + json.bdaPlugin.newVersion);
-
-                    // show alert and disable all the function in the plugin if theme version upgrade is necessary
-                    var bdaPluginThisVersion = $("#bdaPluginThisVersion").text();
                     if (json.bdaPlugin.newVersion > bdaPluginThisVersion) {
+                        console.log("[INFO] [BDA PLUGIN VERSION] New BootyDarkAdmin plugin version is available: v" + json.bdaPlugin.newVersion);
                         $("#pluginPackageName").html(json.bdaPlugin.package);
                         $("#pluginCurrentVersion").html(bdaPluginThisVersion);
                         $("#pluginNewVersion").html( json.bdaPlugin.newVersion );
@@ -409,7 +427,8 @@ class pluginBootyDarkAdmin extends Plugin
                             }
                         }
                         $("#bdaReleaseNotes").html( x );
-                        $("#bdaVersionAlert, #bdaVersionMenuAlert").removeClass("d-none");
+                        $("#bdaVersionAlert").removeClass("d-none");
+                        $("#bdaVersionMenuAlert").addClass("fa fa-bell mr-1 text-danger float-right");
                         $("#downloadLink").attr("href",  json.bdaPlugin.downloadLink );
                         $("#changelogLink").attr("href", json.bdaPlugin.changelogLink );
                         $("#github").attr("href", json.bdaPlugin.github );
