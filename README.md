@@ -59,9 +59,17 @@ Booty Dark Admin plugin contains in this release the following languages:
 
   Option to choose between Show or Hide the menu item. Recommended displaying the menu item to a quickly access to the BDA settings page.
 
-* :new: **Upgrade system**
+* **Upgrade system**
 
   integration of the upgrade system to quickly shown if there is an update available
+  
+* **Admin theme changing/reverting tool** :new:
+
+  You can now easily change/revert your admin theme
+
+* **System requirements checking**
+
+  This is only for checking your system compatibility. If all requirements are met, the plugin can be runing
 
 ------
 
@@ -77,6 +85,8 @@ Here you can see the different what you get if you install this plugin
 | **Contol icons**   |     Bottom      |            Top or Bottom            |
 | **Custom coloring** | Default color | Default, Red, Green, Blue, Yellow, Orange, Purple |
 | **BDA Sidebar Item** | Not available | Display or Hide |
+| **System reqs check** | Not available | Available |
+| **Changing admin theme** | Manually (coding) | One click using the plugin |
 
 ------
 
@@ -89,6 +99,8 @@ Here you can see the different what you get if you install this plugin
 **After successfully upload...**
 
 To using the plugin you have to activate it on the ***Settings / Plugins*** page on admin area of your website
+
+After activation your system will be checked. If all requirements are met (Bludit version, PHP version and BDA them is installed), you can activate the theme and use the plugin.
 
 ------
 
@@ -108,7 +120,7 @@ To using the plugin you have to activate it on the ***Settings / Plugins*** page
 
 ​	**A:**	To disable the plugin launch the admin area of your website and go to the ***Setting / Plugins*** page. Search for the ***Booty Dark Admin*** plugin and click on the text Deactivate.
 
-**Q:**	How can i uninstall the Booty Dark Admin?
+**Q:**	How can i uninstall the Booty Dark Admin plugin?
 
 ​	**A:**	Go to bl-plugins folder on your website root and search for the booty-dark directory and delete it. After this done, go to ***bl-content / databases / plugins*** directory, and **delete** the ***booty-dark-admin*** folder
 

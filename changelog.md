@@ -1,8 +1,25 @@
 ## Booty Dark Admin Plugin Changelog
 
+#### v1.3.0 (03-4-2021)
+
+**Improvements**
+
+* system compatibility checklist to use the plugin
+* admin theme changing/reverting tool to quickly change between admin themes
+
+**Fixes**
+
+* updated translations
+* some bug fixes
+* some design correction
+
+---
+
 #### v1.2.3 (09-3-2021)
 
 * Bug fix: the small bell indicating the new version always appeared in the menu
+
+---
 
 #### v1.2.2 (07-3-2021)
 

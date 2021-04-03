@@ -47,5 +47,28 @@
     "new-bda-theme-version-is-available!": "Nový BDA Theme je k dispozici!",
     "useful-links": "Užitečné odkazy",
     "try-tompidev-plugins-and-themes": "Vyzkoušejte doplňky a motivy Tompidev",
-    "all-plugins-and-themes-from-tompidev": "Všechny doplňky a motivy od Tompidev"
+    "all-plugins-and-themes-from-tompidev": "Všechny doplňky a motivy od Tompidev",
+
+    "__Version comment do not translate it! New language strings since version 1.3.0__":"",
+
+    "the-bda-theme-is-not-activated": "BDA Theme není aktivováno",
+    "system-compatibility-checklist": "Kontrolní seznam kompatibility systému",
+    "bludit-version-3x-or-newer": "Bludit verze 3.x nebo novější",
+    "php-version-56-or-newer": "PHP verze 5.6 nebo novější",
+    "bda-theme-installed": "BDA Theme naistalováno",
+    "the-currently-used-admin-theme": "Aktuálně používané téma správce",
+    "to-use-this-plugin-the-bda-admin-theme-must-be-installed-and-activated": "Chcete-li používat doplněk (plugin) <strong>Booty Dark Admin</strong> musí být naistalováno a aktivováno Booty Dark Admin Theme",
+    "please-download-and-install-the-booty-dark-admin-theme": "Stáhněte si a nainstalujte Booty Dark Admin Theme",
+    "to-activate-it-click-on-the-button-below": "K aktivaci, klikněte na tlačítko níže",
+    "download-theme": "Stáhnout Theme",
+    "activate-theme": "Aktivovat Theme",
+    "no": "Ne",
+    "yes": "Ano",
+    "after-changing-the-theme-you-loose-all-your-custom-bda-theme-settings-and-this-plugin-will-not-work-anymore": "Po změně motivu ztratíte všechna svá vlastní nastavení motivu BDA a tento plugin již nebude fungovat ",
+    "to-revert-the-theme-please-check-the-checkbox-first-and-then-click-on-the-button-below": "Chcete-li motiv vrátit, nejprve zaškrtněte políčko a poté klikněte na tlačítko níže",
+    "warning": "Varování",
+    "restore-theme": "Obnovit téma",
+    "revert-admin-theme-to-this": "Vrátit téma správce k tomuto",
+    "i-understand-the-warning-and-accept-the-consequences": "Rozumím varování a akceptuji důsledky",
+    "if-you-do-not-like-bda-theme,-you-can-use-this-option-to-revert-to-another-admin-theme": "Pokud se vám nelíbí téma BDA, můžete pomocí této možnosti přejít na jiné administrátorské téma"
 }

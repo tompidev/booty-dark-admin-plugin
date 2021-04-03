@@ -4,11 +4,10 @@
 		"name": "Booty Dark Admin",
 		"description": "Kiegészítő plugin a Booty Dark Admin (BDA) sablonhoz"
     },
-    "booty-dark-admin-theme-by-jt-webtools": "Booty Dark Admin sablon a JT Webtools fejlesztésében",
     "show-or-hide-plugin-menu-item": "Menüpont megjelenítése vagy elrejtése",
     "admin-theme-settings": "Admin téma beállítások",
     "open-settings-page-of-booty-dark-admin-plugin": "A Booty Dark Admin plugin beállítások oldal megnyitása",
-    "show-or-hide-plugin-menu-item-on-sidebar": "A plugin menüpontjának megjelenítése vagy elrejtése az oldalsávon",
+    "show-or-hide-plugin-menu-item-on-adminbar": "A plugin menüpontjának megjelenítése vagy elrejtése az oldalsávon",
     "sidebar-color": "Oldalsáv színe",
     "color-of-the-sidebar-on-the-left": "A bal oldalon lévő oldalsáv színe",
     "badges": "Jelvények",
@@ -48,5 +47,28 @@
     "new-bda-theme-version-is-available!": "Új BDA téma verzió jelent meg!",
     "useful-links": "Hasznos linkek",
     "try-tompidev-plugins-and-themes": "Próbáld ki a Tompidev kiegészítőket és témákat",
-    "all-plugins-and-themes-from-tompidev": "Összes Tompidev kiegészítő és téma"
+    "all-plugins-and-themes-from-tompidev": "Összes Tompidev kiegészítő és téma",
+
+    "__Version comment do not translate it! New language strings since version 1.3.0__":"",
+
+    "the-bda-theme-is-not-activated": "A Booty Dark Admin téma nincs aktiválva",
+    "system-compatibility-checklist": "Rendszer kompatibilitási ellenőrzőlista",
+    "bludit-version-3x-or-newer": "Bludit verzió 3.x vagy újabb",
+    "php-version-56-or-newer": "PHP verzió 5.6 vagy újabb",
+    "bda-theme-installed": "BDA téma telepítve van",
+    "the-currently-used-admin-theme": "A jelenleg használt admin sablon",
+    "to-use-this-plugin-the-bda-admin-theme-must-be-installed-and-activated": "A plugin használatához telepíteni és aktiválni kell a <strong>booty-dark-admin</strong> témát",
+    "please-download-and-install-the-booty-dark-admin-theme": "Kérlek töltsd le és telepítsd a Booty Dark Admin témát",
+    "to-activate-it-click-on-the-button-below": "Az aktiváláshoz kattints az alábbi gombra",
+    "download-theme": "Téma letöltése",
+    "activate-theme": "Téma aktiválása",
+    "no": "Nem",
+    "yes": "Igen",
+    "after-changing-the-theme-you-loose-all-your-custom-bda-theme-settings-and-this-plugin-will-not-work-anymore": "A téma visszaállítását követően minden egyedi BDA téma beállításod el fog veszni és ez a plugin nem fog működni többé",
+    "to-revert-the-theme-please-check-the-checkbox-first-and-then-click-on-the-button-below": "A téma visszaállításához jelöld be az alábbi négyzetet, majd kattints a visszaállító gombra",
+    "warning": "Figyelmeztetés",
+    "restore-theme": "Téma visszaállítása",
+    "revert-admin-theme-to-this": "Admin téma visszaállítása erre",
+    "i-understand-the-warning-and-accept-the-consequences": "Megértettem a figyelmeztetést és vállalom a következményeket",
+    "if-you-do-not-like-bda-theme,-you-can-use-this-option-to-revert-to-another-admin-theme": "Ha nem tetszik a BDA téma, ezzel az opcióval visszaállíthatod egy másik admin témára"
 }

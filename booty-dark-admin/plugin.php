@@ -7,8 +7,8 @@
  *  @email          :  support@tompidev.com
  *  @license        :  MIT
  *
- *  @last-modified  :  2021-03-09 21:05:44 CET
- *  @release        :  1.2.3
+ *  @last-modified  :  2021-04-03 12:18:51 CET
+ *  @release        :  1.3.0
  **/
 
 class pluginBootyDarkAdmin extends Plugin
@@ -39,19 +39,68 @@ class pluginBootyDarkAdmin extends Plugin
         $html .= $this->description();
         $html .= '</div>' . PHP_EOL;
 
+        /* SECTION Check system
+        * Show alert when the admin theme is not the BootyDarkAdmin.
+        * Activation is required to run this plugin!
+        * Controlled by PHP, based on the value 'adminTheme' of the page database
+        */
+        if($site->adminTheme() !== 'booty-dark-admin'){
+        $html .= '<div id="bdaThemeNotActive" class="alert border-danger" role="alert">' . PHP_EOL;
+        $html .= '<h3 class="my-5 text-center text-uppercase">' . $L->get('The BDA Theme is not activated') . '!</h3>' . PHP_EOL;
+        $html .= '<div class="container">' . PHP_EOL;
+        $html .= '<div class="row justify-content-md-center">' . PHP_EOL;
+        $html .= '<div class="col-md-7 mb-5" >' . PHP_EOL;
+        $html .= '<div class="card">' . PHP_EOL;
+        $html .= '<div class="card-body text-center" >' . PHP_EOL;
+        $html .= '<h5 class="mb-4">' . $L->get('System compatibility checklist') . '</h5>' . PHP_EOL;
+        $html .= '<ul class="pl-3" style="list-style-type:none">' . PHP_EOL;
+        $html .= '<li><i id="bluditVersion" class="font-weight-bold mr-2"></i>' . $L->get('Bludit version 3.x or newer') . ' : <strong>'. BLUDIT_VERSION . '</strong></li>' . PHP_EOL;
+        $html .= '<li><i id="phpVersion" class="font-weight-bold mr-2"></i>' . $L->get('PHP version 5.6 or newer') . ' : <strong>'. phpversion(). '</strong></li>' . PHP_EOL;
+        $html .= '<li><i id="bdaInstalled" class="font-weight-bold mr-2"></i>' . $L->get('BDA Theme installed') . ' : <strong id="checklistBdaInstalled"></strong></li>' . PHP_EOL;
+        $html .= '</ul>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        $html .= '<div class="row">' . PHP_EOL;
+        $html .= '<div class="col text-center">' . PHP_EOL;
+        $html .= '<p>' . $L->get('The currently used admin theme') . ' : <span class="font-weight-bold">' . $site->adminTheme() . '</span></p>' . PHP_EOL;
+        $html .= '<p>' . $L->get('To use this plugin the BDA admin theme must be installed and activated') . '!</p>' . PHP_EOL;
+        $html .= '<p id="clickOnButton">' . $L->get('To activate it click on the button below') . '.</p>' . PHP_EOL;
+        $html .= '<p id="downloadBda">' . $L->get('Please download and install the Booty Dark Admin Theme') . '</p>' . PHP_EOL;
+        $html .= '<button id="downloadBdaLink" type="button" class="btn btn-lg btn-success ml-3" onClick="downloadBda()">' . $L->get('Download Theme') . '<i class="fa fa-cloud-download ml-2"></i></button>' . PHP_EOL;
+        $html .= '<button id="setbdatheme" type="submit" name="setbdatheme" class="btn btn-lg btn-success ml-3">' . $L->get('Activate Theme') . '<i class="fa fa-refresh ml-2"></i></button>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        }
+
+        /*
+        * The main section of the form.
+        * If the BootyDarkAdmin theme is not activated, the form cannot be used.
+        * Controlled by JS
+        */
+        $html .= PHP_EOL . '<div id="pluginMain">' . PHP_EOL;
+
         /*
         * Show warning message about new plugin release
         * upgrade is necessary
         * controlled by ajax
         */
-        $html .= '<div id="bdaVersionAlert" class="alert alert-light alert-dismissible border-danger text-danger d-none" role="alert">' . $L->g('new-release-warning') . '' . PHP_EOL;
-        $html .= '<a id="learnMore" type="button" class="btn btn-danger btn-sm text-light ml-2" data-toggle="modal" data-target="#bdaVersionModal">' . $L->g('Learn more') . '</a>' . PHP_EOL;
+        if($site->adminTheme() == 'booty-dark-admin'){
+        $html .= '<div id="bdaVersionAlert" class="alert alert-warning alert-dismissible border d-none" role="alert">' . $L->g('new-release-warning') . '' . PHP_EOL;
+        $html .= '<a id="learnMore" type="button" class="btn btn-success btn-sm text-light ml-2" data-toggle="modal" data-target="#bdaVersionModal">' . $L->g('Learn more') . '</a>' . PHP_EOL;
+        $html .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' . PHP_EOL;
+        $html .= '<span aria-hidden="true">&times;</span>' . PHP_EOL;
+        $html .= '</button>' . PHP_EOL;
         $html .= '</div>' . PHP_EOL;
+        }
 
         /*
         * Form "select" element for set color of sidebar
         */
-        $html .= PHP_EOL . '<div>';
+        $html .= PHP_EOL . '<div class="form-group">';
         $html .= '<label for="sidebarColor" style="font-size:1.25rem">' . $L->g('Sidebar color') . '</label>' . PHP_EOL;
         $html .= '<select id="sidebarColor" name="sidebarColor">' . PHP_EOL;
         $html .= '<option value="dark" ' . ($this->getValue('sidebarColor') === 'dark' ? 'selected' : '') . '>' . $L->g('Dark') . '</option>' . PHP_EOL;
@@ -93,7 +142,7 @@ class pluginBootyDarkAdmin extends Plugin
         /*
         * Form "select" element for enable or disable Badges on sidebar and content page tabs
         */
-        $html .= PHP_EOL . '<div>';
+        $html .= PHP_EOL . '<div class="form-group">';
         $html .= '<label for="badges" style="font-size:1.25rem">' . $L->g('Badges') . '</label>' . PHP_EOL;
         $html .= '<select id="badges" name="badges">' . PHP_EOL;
         $html .= '<option value="hide" ' . ($this->getValue('badges') === 'hide' ? 'selected' : '') . '>' . $L->g('Hide') . '</option>' . PHP_EOL;
@@ -120,7 +169,7 @@ class pluginBootyDarkAdmin extends Plugin
         /*
         * Form "select" element for show or hide footer info of all admin pages
         */
-        $html .= PHP_EOL . '<div class="form-group">' . PHP_EOL;
+        $html .= PHP_EOL . '<div class="form-group pb-4">' . PHP_EOL;
         $html .= '<label for="footerInfo" style="font-size:1.25rem">' . $L->g('Footer info') . '</label>' . PHP_EOL;
         $html .= '<select id="footerInfo" name="footerInfo">' . PHP_EOL;
         $html .= '<option value="show" ' . ($this->getValue('footerInfo') === 'show' ? 'selected' : '') . '>' . $L->g('Show') . '</option>' . PHP_EOL;
@@ -129,17 +178,55 @@ class pluginBootyDarkAdmin extends Plugin
         $html .= '<small class="text-muted">' . $L->g('Hide or show footer text on all admin pages') . '</small>' . PHP_EOL;
         $html .= '</div>' . PHP_EOL;
 
+        /* SECTION theme restoration
+        * ATTENTION! This section is for changing admin theme!
+        */
+        if($site->adminTheme() == 'booty-dark-admin'){
+        $html .= PHP_EOL . '<button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#restoreAdminTheme" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">' . $L->g('Restore Theme') . '</button>';
+        $html .= '<div id="restoreAdminTheme" class="collapse mt-4">' . PHP_EOL;
+        $html .= '<div class="border border-danger text-danger font-weight-bold text-center pt-3 mb-3">' . PHP_EOL;
+        $html .= '<h4 class="text-uppercase">' . $L->g('WARNING') . '!</h4>' . PHP_EOL;
+        $html .= '<p>' . $L->g('After changing the theme you loose all your custom BDA theme settings and this plugin will not work anymore') . '!</p>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+        $html .= '<div>' . $L->g('If you do not like BDA theme, you can use this option to revert to another admin theme') . '.</div>' . PHP_EOL;
+        $html .= '<div class="mt-3">' . $L->g('To revert the theme please check the checkbox first and then click on the button below') . '.</div>' . PHP_EOL;
+        $html .= '<div class="form-check">' . PHP_EOL;
+        $html .= '<input class="form-check-input" type="checkbox" value="" id="restoreThemeCheck">' . PHP_EOL;
+        $html .= '<label class="form-check-label font-weight-bold" for="restoreThemeCheck">' . $L->g('I understand the warning and accept the consequences') . '.</label>' . PHP_EOL;
+        $html .= '<p>' . $L->g('Revert admin theme to this') .':</p>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
+
+        /*
+        * Reading the themes directory.
+        * If more than one theme is found, all of them will be listed so that the user can set the desired theme.
+        */
+        $themesDir = PATH_ADMIN_THEMES;
+        foreach (glob($themesDir . '*', GLOB_ONLYDIR) as $theme) {
+            if (!is_dir_empty($theme)) {
+                $theme = str_replace($themesDir, '', $theme); // truncate the theme path and keep the theme name only
+                if($site->adminTheme() !== $theme){
+                    $html .= '<span class="ml-3"><button type="submit" name="restoreSelect" value="' . $theme . '" class="btn btn-danger" disabled>'. $theme .'</button></span>';
+                }
+            }
+        }
+        }
+
+        /*
+        * End of pluginMain section
+        */
+        $html .= '</div>' . PHP_EOL;
+
 		/*
-		* App footer for plugin version and developer's urls
+		* Footer for plugin version and developer urls
 		*/
 		$html .= PHP_EOL . '<div class="text-center pt-3 mt-4 border-top text-muted">' . PHP_EOL;
 		$html .= $this->name() . ' - v<span id="bdaPluginThisVersion">' . $this->version() . '</span> @ ' . date('Y') . ' by ' .  $this->author() . PHP_EOL;
 		$html .= '</div>' . PHP_EOL;
 		$html .= '<div class="text-center">' . PHP_EOL;
-		$html .= '<a class="fa fa-2x fa-globe" href="' . $this->website() . '" target="_blank" title="Visit TompiDev\'s Website"></a>' . PHP_EOL;
-		$html .= '<a class="fa fa-2x fa-github" href="' . $site->github() . '" target="_blank" title="Visit TompiDev on Github"></a>' . PHP_EOL;
-		$html .= '<a class="fa fa-2x fa-twitter" href="' . $site->twitter() . '" target="_blank" title="Visit TompiDev on Twitter"></a>' . PHP_EOL;
-		$html .= '<a class="fa fa-2x fa-envelope" href="mailto:' . $this->email() . '?subject=Question%20about%20'.$this->name().'" title="Send me an email"></a>' . PHP_EOL;
+		$html .= '<a class="fa fa-2x fa-globe" href="https://www.tompidev.com/" target="_blank" title="Visit TompiDev\'s Website"></a>' . PHP_EOL;
+		$html .= '<a class="fa fa-2x fa-github" href="https://www.github.com/tompidev" target="_blank" title="Visit TompiDev on Github"></a>' . PHP_EOL;
+		$html .= '<a class="fa fa-2x fa-twitter" href="https://www.twitter.com/tompidev" target="_blank" title="Visit TompiDev on Twitter"></a>' . PHP_EOL;
+		$html .= '<a class="fa fa-2x fa-envelope" href="mailto:support@tompidev.com/?subject=Question%20about%20' . $this->name() . '" title="Send me an email"></a>' . PHP_EOL;
 		$html .= '<a class="fa fa-2x fa-cubes" href="https://www.tompidev.com/booty-dark-admin-plugin" target="_blank" title="Plugin\'s website on tompidev.com"></a>' . PHP_EOL;
 		$html .= '</div>' . PHP_EOL;
 
@@ -150,28 +237,25 @@ class pluginBootyDarkAdmin extends Plugin
 <div class="modal fade" id="bdaVersionModal" tabindex="-1" aria-labelledby="bdaVersionModal" aria-hidden="true">
  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
    <div class="modal-content">
-     <div class="modal-header">
-       <h4 class="modal-title">' . $L->g('Release Notes') . '</h4>
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-       </button>
+     <div class="modal-header text-center">
+       <h4 class="modal-title w-100">' . $L->g('Release Notes') . '</h4>
      </div>
      <div class="modal-body">
        <div calss="container">
             <div class="row">
-                <div class="col-5 font-weight-bold">' . $L->g('Package') . ':</div>
+                <div class="col-5 font-weight-bold pr-1 mr-2">' . $L->g('Package') . ':</div>
                 <div id="pluginPackageName"></div>
             </div>
             <div class="row">
-                <div class="col-5 font-weight-bold">' . $L->g('Current version') . ':</div>
+                <div class="col-5 font-weight-bold pr-1 mr-2">' . $L->g('Current version') . ':</div>
                 <div id="pluginCurrentVersion"></div>
             </div>
             <div class="row">
-                <div class="col-5 font-weight-bold">' . $L->g('New version') . ':</div>
+                <div class="col-5 font-weight-bold pr-1 mr-2">' . $L->g('New version') . ':</div>
                 <div id="pluginNewVersion"></div>
             </div>
             <div class="row">
-                <div class="col-5 font-weight-bold">' . $L->g('Release date') . ':</div>
+                <div class="col-5 font-weight-bold pr-1 mr-2">' . $L->g('Release date') . ':</div>
                 <div id="pluginReleaseDate"></div>
             </div>
        </div>
@@ -190,14 +274,28 @@ class pluginBootyDarkAdmin extends Plugin
      </div>
    </div>
  </div>
-</div>
-        ' . PHP_EOL;
+</div> ' . PHP_EOL;
 
         return $html;
     }
 
     public function adminHead()
     {
+        global $site;
+
+        if($site->adminTheme() !== 'booty-dark-admin'){
+        /*
+        * Load css file if BDA is not activated.
+        * This file helps to hiding and formatting the #pluginMain container
+        */
+        echo "<link rel='stylesheet' type='text/css' href='". HTML_PATH_PLUGINS ."booty-dark-admin/style.css'>" . PHP_EOL;
+
+        /*
+        * Hide or disable the whole form if BDA admin theme not activated
+        */
+        // echo "<script>$('#pluginMain *').prop('disabled',true).addClass('text-muted')</script>" . PHP_EOL;
+        }
+
         /*
         * Initializing custom colors for colored items on sidebar
         */
@@ -220,6 +318,7 @@ class pluginBootyDarkAdmin extends Plugin
     public function adminSidebar()
     {
         global $L;
+
         $html = '';
         if ($this->getValue('bdaOnSidebar') && $this->getValue('bdaOnSidebar') === 'show') {
             $html = '<a id="bdaNavitem" data-bdaPluginThisVersion="' . $this->version() . '" class="nav-link" href="' . HTML_PATH_ADMIN_ROOT . 'configure-plugin/' . $this->className() . '" title="' . $L->get('Open Settings page of Booty Dark Admin plugin') . '">' . $L->get('Admin Theme settings') . '<i id="bdaVersionMenuAlert" title="' . $L->get('new-release-warning') . '"></i></a>';
@@ -234,6 +333,47 @@ class pluginBootyDarkAdmin extends Plugin
         global $static;
         global $sticky;
         global $drafts;
+        global $L;
+
+        /*
+        * Checking existence of booty-dark-admin theme.
+        * If exists, let user changing the theme.
+        * If not exists, disable theme activation button and show the Theme download link.
+        * Building of the version checklist.
+        */
+echo "<script>";
+        if (!file_exists(PATH_ADMIN_THEMES . 'booty-dark-admin') or (BLUDIT_VERSION < 3.0) or (phpversion() < 5.6)) {
+            echo "
+            // $('#setbdatheme').toggleClass('btn-danger').prop('disabled', true).append(' (". $L->g('Not available, please take a look on checklist') .")').css('cursor', 'not-allowed');
+            $('#clickOnButton, #setbdatheme').addClass('d-none');
+            function downloadBda(){
+                window.open('http://tompidev.com/booty-dark-admin-theme', '_blank');
+            }
+                ";
+        }
+        if (file_exists(PATH_ADMIN_THEMES . 'booty-dark-admin')) {
+            echo "
+            $('#checklistBdaInstalled').html(' ". $L->g('Yes') ."');
+            $('#bdaInstalled').addClass('fa fa-check-circle text-success');
+            $('#downloadBda, #downloadBdaLink').addClass('d-none');
+                ";
+        }else{
+            echo "
+            $('#checklistBdaInstalled').html(' ". $L->g('No') ."');
+            $('#bdaInstalled').addClass('fa fa-times-circle text-danger');
+            ";
+        }
+        if (BLUDIT_VERSION < 3.0) {
+            echo "$('#bluditVersion').addClass('fa fa-times-circle text-danger');";
+        }else{
+            echo "$('#bluditVersion').addClass('fa fa-check-circle text-success');";
+        }
+        if (phpversion() < 5.6) {
+            echo "$('#phpVersion').addClass('fa fa-times-circle text-danger');";
+        }else{
+            echo "$('#phpVersion').addClass('fa fa-check-circle text-success');";
+        }
+echo PHP_EOL . "</script>" . PHP_EOL;
 
         $scripts = PHP_EOL . '<script>' . PHP_EOL;
 
@@ -299,7 +439,7 @@ class pluginBootyDarkAdmin extends Plugin
         if ($this->getValue('footerInfo') === 'hide') {
             $scripts .= '$("#adminFooterInfo").addClass("d-none");' . PHP_EOL;
         }
-        $scripts .= '$("#footerInfo").change(function(){;' . PHP_EOL;
+        $scripts .= '$("#footerInfo").change(function(){' . PHP_EOL;
         $scripts .= 'if ($(this).val() === "hide"){' . PHP_EOL;
         $scripts .= '$("#adminFooterInfo").addClass("d-none");' . PHP_EOL;
         $scripts .= '}else{' . PHP_EOL;
@@ -382,19 +522,32 @@ class pluginBootyDarkAdmin extends Plugin
         $scripts .= '</script>' . PHP_EOL;
 
         /*
+        * Control of the subject reset button.
+        * If the checkbox is not checked, the button will be disabled.
+        */
+        $scripts .= '<script>' . PHP_EOL;
+        $scripts .= '$("#restoreThemeCheck").change(function(){' . PHP_EOL;
+        $scripts .= 'if($(this).is(":checked")){' . PHP_EOL;
+        $scripts .= '$("button[name=\'restoreSelect\']").removeAttr("disabled");' . PHP_EOL;
+        $scripts .= '}else{' . PHP_EOL;
+        $scripts .= '$("button[name=\'restoreSelect\']").attr("disabled", "disabled");' . PHP_EOL;
+        $scripts .= '}' . PHP_EOL;
+        $scripts .= '})' . PHP_EOL;
+        $scripts .= '</script>' . PHP_EOL;
+
+        /*
         * Version check script
-        *
         * If the sidebar menu item appears, the current version will be read from this div, otherwise from the plugin page footer
         */
         if ($this->getValue('bdaOnSidebar') && $this->getValue('bdaOnSidebar') === 'show') {
             $scripts .= '<script>
             var getVersion = document.getElementById("bdaNavitem");
             var bdaPluginThisVersion = getVersion.getAttribute("data-bdaPluginThisVersion");';
-            $scripts .= '</script>' . PHP_EOL;
+            $scripts .= PHP_EOL . '</script>' . PHP_EOL;
         }else{
             $scripts .= '<script>
             var bdaPluginThisVersion = $("#bdaPluginThisVersion").html();';
-            $scripts .= '</script>' . PHP_EOL;
+            $scripts .= PHP_EOL . '</script>' . PHP_EOL;
         }
 
         /*
@@ -402,12 +555,15 @@ class pluginBootyDarkAdmin extends Plugin
         */
         $scripts .= '<script>
 
+        // var getVersion = document.getElementById("bdaNavitem");
+        // var bdaPluginThisVersion = getVersion.getAttribute("data-bdaPluginThisVersion");
+
         function checkBDAVersion() {
 
             console.log("[INFO] [BDA PLUGIN VERSION] Getting list of versions of BootyDarkAdmin plugin.");
 
             $.ajax({
-                url: "https://tompidev.com/downloads/release-info/json/bl-plugin-bda.json",
+                url: "https://tompidev.com/release-info/json/bl-plugin-bda.json",
                 method: "GET",
                 dataType: "json",
                 success: function(json) {
@@ -428,7 +584,7 @@ class pluginBootyDarkAdmin extends Plugin
                         }
                         $("#bdaReleaseNotes").html( x );
                         $("#bdaVersionAlert").removeClass("d-none");
-                        $("#bdaVersionMenuAlert").addClass("fa fa-bell mr-1 text-danger float-right");
+                        $("#bdaVersionMenuAlert").addClass("fa fa-bell mr-1 text-warning float-right");
                         $("#downloadLink").attr("href",  json.bdaPlugin.downloadLink );
                         $("#changelogLink").attr("href", json.bdaPlugin.changelogLink );
                         $("#github").attr("href", json.bdaPlugin.github );
@@ -447,3 +603,5 @@ class pluginBootyDarkAdmin extends Plugin
         return $scripts;
     }
 }
+
+include('changetheme.php');

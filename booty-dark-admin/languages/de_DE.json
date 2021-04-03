@@ -8,7 +8,7 @@
     "show-or-hide-plugin-menu-item": "Ein- oder ausblenden von plugin menüpunkt",
     "admin-theme-settings": "Thema Einstellungen",
     "open-settings-page-of-booty-dark-admin-plugin": "Booty Dark Admin plugin Einstellungen seite eröffnen",
-    "show-or-hide-plugin-menu-item-on-sidebar": "Ein- oder ausblenden von plugin menüpunkt in der Seitenleiste",
+    "show-or-hide-plugin-menu-item-on-adminbar": "Ein- oder ausblenden von plugin menüpunkt in der Seitenleiste",
     "sidebar-color": "Seitenleistenfarbe",
     "color-of-the-sidebar-on-the-left": "Die Farbe der Seitenleiste auf der linken Seite",
     "badges": "Abzeichen",
@@ -47,5 +47,28 @@
     "new-bda-theme-version-is-available!": "Neue BDA Theme ist verfügbar!",
     "useful-links": "Nützliche Links",
     "try-tompidev-plugins-and-themes": "Probieren Sie Tompidev Plugins und Themen aus",
-    "all-plugins-and-themes-from-tompidev": "Alle Plugins und Themes von Tompidev"
+    "all-plugins-and-themes-from-tompidev": "Alle Plugins und Themes von Tompidev",
+
+    "__Version comment do not translate it! New language strings since version 1.3.0__":"",
+
+    "the-bda-theme-is-not-activated": "Das Booty Dark Admin Thema ist nicht aktiviert",
+    "system-compatibility-checklist": "Checkliste zur Systemkompatibilität",
+    "bludit-version-3x-or-newer": "Bludit Version 3.x oder höher",
+    "php-version-56-or-newer": "PHP Version 5.6 oder höher",
+    "bda-theme-installed": "BDA Theme ist installiert",
+    "the-currently-used-admin-theme": "Die aktuell verwendete Admin-Vorlage",
+    "to-use-this-plugin-the-bda-admin-theme-must-be-installed-and-activated": "Um das Plugin verwenden zu können, müssen Sie das Thema <strong> booty-dark-admin </strong> installieren und aktivieren",
+    "please-download-and-install-the-booty-dark-admin-theme": "Bitte laden Sie das Booty Dark Admin Thema herunter und installieren Sie es",
+    "to-activate-it-click-on-the-button-below": "Klicken Sie zum Aktivieren auf die Schaltfläche unten",
+    "download-theme": "Thema herunterladen",
+    "activate-theme": "Thema Aktivieren",
+    "no": "Nein",
+    "yes": "Ja",
+    "after-changing-the-theme-you-loose-all-your-custom-bda-theme-settings-and-this-plugin-will-not-work-anymore": "Nach dem Zurücksetzen des Themas gehen alle benutzerdefinierten BDA Thema einstellungen verloren und dieses Plugin wird nicht mehr funktionieren",
+    "to-revert-the-theme-please-check-the-checkbox-first-and-then-click-on-the-button-below": "Um das Thema wiederherzustellen, aktivieren Sie das Kontrollkästchen unten und klicken Sie auf die Schaltfläche Wiederherstellen",
+    "warning": "Warnung",
+    "restore-theme": "Thema wiederherstellen",
+    "revert-admin-theme-to-this": "Admin Theme wiederherstellen auf",
+    "i-understand-the-warning-and-accept-the-consequences": "Ich verstehe die Warnung und akzeptiere die Konsequenzen",
+    "if-you-do-not-like-bda-theme,-you-can-use-this-option-to-revert-to-another-admin-theme": "Wenn Ihnen das BDA-Thema nicht gefällt, können Sie mit dieser Option zu einem anderen Administrator-Thema zurückkehren"
 }
